@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 module VGA_SignalGen(clk, rst,ColorIn,  PixelCount, LineCount, Hsync,Vsync, ColorOut);
 	input clk, rst;
-	input [7:0] ColorIn;
+	input [15:0] ColorIn;
 	//output reg [subPixelCountNBITS-1:0] subPixelCount;
 	reg [subPixelCountNBITS-1:0] subPixelCount;
 	output reg [HorzPixNBITS-1:0] PixelCount;
 	output reg [VertPixNBITS-1:0] LineCount;
 	output reg Hsync;
 	output reg Vsync;
-	output reg [7:0] ColorOut;
+	output reg [15:0] ColorOut;
 	//output Active;
 	// Initialization of registers
 	initial subPixelCount = 0;

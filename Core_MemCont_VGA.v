@@ -21,7 +21,7 @@
 module Core_MemCont_VGA(//up,down,left,right,
 ExternalClk,ColorOut,Hsync,Vsync, 
 CA,CB,CC,CD,CE,CF,CG,DP,AN0, AN1, AN2, AN3,rstBtn,//switches,
-/*JA, JD, JC,*/
+JA, JD, JC,
 ss,sdi,sdo,sclk,
 sw,
 led
@@ -33,9 +33,9 @@ led
 	output CA,CB,CC,CD,CE,CF,CG,DP,AN0, AN1, AN2, AN3;
 	input rstBtn;
 //	input [7:0] switches;
-//	input [5:4] JA; 
-//	input [5:4] JC;
-//	input [5:4] JD;
+	input [5:4] JA; 
+	input [5:4] JC;
+	input [5:4] JD;
 	// Accelerometer
 	input sdi;
 	output ss,sdo,sclk,led;
@@ -75,8 +75,8 @@ led
 	(16'd119-yPixelPos),  
 	colorPos, 
 	CoreDataOut, 
-	VGADataOut
-/*	accBeenRead*/);
+	VGADataOut,
+	accBeenRead);
 	
 	VGA_Controller VGA(clk, VGADataOut[7:0],VGAAddress,Hsync,Vsync,ColorOut);
 	
@@ -95,24 +95,24 @@ led
 	buttonCount LRcounter(clk,rightdb,leftdb,1'b0,LRcount);*/
 	
 	// Seven Segment Display for Seeing Cursor position on screen
-//	SevSegDisplay4DigController DisplayController(clk,1'b0,selDataOut,ContBinOUT,en_bus);
-//	
-//	BinaryTo4DigHex7SegDisplay	 DisplayConverter(en_bus, ContBinOUT,CA,CB,CC,CD,CE,CF,CG,DP,AN0, AN1, AN2, AN3);
-//	
-	// Optical Encoder Modules
-//	PmodEnc #(159) xEnc (clk, JA, xPixelPos[7:0]); 
-//	PmodEnc #(119) yEnc (clk, JC, yPixelPos[7:0]); 
-//	PmodEnc #(255) color(clk, JD, colorPos[7:0]);
+	SevSegDisplay4DigController DisplayController(clk,1'b0,selDataOut,ContBinOUT,en_bus);
 	
-//	assign xPixelPos[15:8] = 8'd0;
-//	assign yPixelPos[15:8] = 8'd0;
-//	assign colorPos[15:8] = 8'd0;
+	BinaryTo4DigHex7SegDisplay	 DisplayConverter(en_bus, ContBinOUT,CA,CB,CC,CD,CE,CF,CG,DP,AN0, AN1, AN2, AN3);
+	
+	// Optical Encoder Modules
+	PmodEnc #(159) xEnc (clk, JA, xPixelPos[7:0]); 
+	PmodEnc #(119) yEnc (clk, JC, yPixelPos[7:0]); 
+	PmodEnc #(255) color(clk, JD, colorPos[7:0]);
+	
+	assign xPixelPos[15:8] = 8'd0;
+	assign yPixelPos[15:8] = 8'd0;
+	assign colorPos[15:8] = 8'd0;
 	
 	//Accelerometer 
 	
-//	ACL _ACL(clk, rstBtn, sw, sdi, accBeenRead, sdo, sclk, ss, aclOut,selDataOut[9:0]);
-//	assign selDataOut[15:10] = 6'd0;
-//	assign led = aclOut[0];
+	ACL _ACL(clk, rstBtn, sw, sdi, accBeenRead, sdo, sclk, ss, aclOut,selDataOut[9:0]);
+	assign selDataOut[15:10] = 6'd0;
+	assign led = aclOut[0];
 
 
 endmodule
