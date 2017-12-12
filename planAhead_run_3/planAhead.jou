@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Mon Dec 11 15:57:57 2017
+# Process ID: 1976
+# Log file: C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/planAhead_run_3/planAhead.log
+# Journal file: C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

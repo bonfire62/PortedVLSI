@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/Core_MemCont_VGA.xst" -ofn "C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/Core_MemCont_VGA.syr" 
+xst -intstyle ise -ifn "C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/Core_MemCont_VGA.xst" -ofn "C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/Core_MemCont_VGA.syr" 

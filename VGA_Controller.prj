@@ -1,0 +1,2 @@
+verilog work "VGA_SignalGen.v"
+verilog work "VGA_Controller.v"

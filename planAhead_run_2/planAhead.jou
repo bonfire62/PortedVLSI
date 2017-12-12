@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Mon Dec 11 15:17:09 2017
+# Process ID: 8320
+# Log file: C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/pa.fromNetlist.tcl
+report_drc -name drc_1

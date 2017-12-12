@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/VGA_Controller.xst" -ofn "C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/VGA_Controller.syr" 

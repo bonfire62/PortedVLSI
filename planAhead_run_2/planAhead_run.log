@@ -1,0 +1,73 @@
+
+****** PlanAhead v14.7
+  **** Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -72 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/pa.fromNetlist.tcl
+# create_project -name PortedVLSI -dir "C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/planAhead_run_2" -part xc7a100tcsg324-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/VGA_Controller.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI} }
+# set_property target_constrs_file "VGA_Controller.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/VGA_Controller.ucf' to fileset 'constrs_1'
+# add_files [list {VGA_Controller.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc7a100tcsg324-3
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design VGA_Controller.ngc ...
+WARNING:NetListWriters:298 - No output is written to VGA_Controller.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus Madd_Address_lut<9 : 3> on block
+   VGA_Controller is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file VGA_Controller.edif ...
+ngc2edif: Total memory usage is 83312 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/PortedVLSI.data/cache/VGA_Controller_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_2/PortedVLSI.data/cache/VGA_Controller_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/VGA_Controller.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ExternalClk' [C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/VGA_Controller.ucf:1]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'ExternalClk' [C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/VGA_Controller.ucf:1]
+Finished Parsing UCF File [C:/Users/kenbo/Documents/XilinxProjects/PortedVLSI/VGA_Controller.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 15 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+  FD => FDCE: 12 instances
+  FDR => FDRE: 2 instances
+
+Phase 0 | Netlist Checksum: 210f459c
+link_design: Time (s): elapsed = 00:00:12 . Memory (MB): peak = 717.477 ; gain = 289.578
+report_drc -name drc_1
+INFO: [Drc 23-27] Running DRC with 2 threads
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Dec 11 15:18:16 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead

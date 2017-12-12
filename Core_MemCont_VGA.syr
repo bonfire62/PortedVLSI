@@ -1,0 +1,172 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: Core_MemCont_VGA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Core_MemCont_VGA.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Core_MemCont_VGA"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : Core_MemCont_VGA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\VGA_SignalGen.v" into library work
+Parsing module <VGA_SignalGen>.
+Analyzing Verilog file "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\RegisterFile.v" into library work
+Parsing module <RegisterFile>.
+Analyzing Verilog file "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\Dispatch.v" into library work
+Parsing module <Dispatch>.
+Analyzing Verilog file "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\ALU.v" into library work
+Parsing module <ALU>.
+Analyzing Verilog file "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\VGA_Controller.v" into library work
+Parsing module <VGA_Controller>.
+Analyzing Verilog file "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" into library work
+Parsing module <MemCont>.
+Analyzing Verilog file "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\CoreTop.v" into library work
+Parsing module <CoreTop>.
+Analyzing Verilog file "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\Core_MemCont_VGA.v" into library work
+Parsing module <Core_MemCont_VGA>.
+Parsing VHDL file "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\RAM.vhd" into library work
+Parsing entity <RAM>.
+Parsing architecture <RAM_a> of entity <ram>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Core_MemCont_VGA>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <CoreTop>.
+
+Elaborating module <RegisterFile>.
+
+Elaborating module <ALU>.
+
+Elaborating module <MemCont>.
+
+Elaborating module <Dispatch>.
+WARNING:HDLCompiler:1127 - "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 49: Assignment to WriteDataOut ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 50: Assignment to weOut ignored, since the identifier is never used
+Going to vhdl side to elaborate module RAM
+
+Elaborating entity <RAM> (architecture <RAM_a>) from library <work>.
+Back to verilog to continue elaboration
+ERROR:HDLCompiler:267 - "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 58: Cannot find port douta on this module
+ERROR:HDLCompiler:267 - "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 60: Cannot find port web on this module
+ERROR:HDLCompiler:267 - "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 62: Cannot find port dinb on this module
+Module MemCont remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 21: Empty module <MemCont> remains a black box.
+WARNING:HDLCompiler:1127 - "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\Core_MemCont_VGA.v" Line 79: Assignment to accBeenRead ignored, since the identifier is never used
+
+Elaborating module <VGA_Controller>.
+
+Elaborating module <VGA_SignalGen>.
+WARNING:HDLCompiler:634 - "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\Core_MemCont_VGA.v" Line 54: Net <xPixelPos[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\Core_MemCont_VGA.v" Line 57: Net <aclOut[0]> does not have a driver.
+--> 
+
+Total memory usage is 294572 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
