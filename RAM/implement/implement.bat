@@ -3,9 +3,9 @@
  
  
 
-
-
  
+
+
 
 rem Clean up the results directory
 rmdir /S /Q results
@@ -31,7 +31,7 @@ copy ..\example_design\RAM_exdes.ucf results\
 cd results
 
 echo 'Running ngdbuild'
-ngdbuild -p xc6vlx75t-ff484-3 RAM_exdes
+ngdbuild -p xc7a100t-csg324-3 RAM_exdes
 
 echo 'Running map'
 map RAM_exdes -o mapped.ncd  -pr i
@@ -43,7 +43,7 @@ echo 'Running trce'
 trce -e 10 routed.ncd mapped.pcf -o routed
 
 echo 'Running design through bitgen'
-bitgen -w routed
+bitgen -w routed -g UnconstrainedPins:Allow
 
-echo 'Running netgen to create gate level VHDL model'
-netgen -ofmt vhdl -sim -tm RAM_exdes -pcf mapped.pcf -w routed.ncd routed.vhd
+echo 'Running netgen to create gate level Verilog model'
+netgen -ofmt verilog -sim -tm RAM_exdes -pcf mapped.pcf -w -sdf_anno false routed.ncd routed.v

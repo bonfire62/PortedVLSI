@@ -24,14 +24,24 @@
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Core_MemCont_VGA.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Core_MemCont_VGA.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Core_MemCont_VGA.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Core_MemCont_VGA.ngr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Core_MemCont_VGA.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Core_MemCont_VGA.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Core_MemCont_VGA.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Core_MemCont_VGA.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Core_MemCont_VGA_envsettings.html"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Core_MemCont_VGA_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Core_MemCont_VGA_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="RAM.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="RAM.v" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VEO" xil_pn:name="RAM.veo" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ROM.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ROM.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ROM.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RegisterFile.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RegisterFile.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RegisterFile.xst"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="VGA_Controller.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="VGA_Controller.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="VGA_Controller.ngc"/>
@@ -43,6 +53,7 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="VGA_Controller_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="VGA_Controller_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="coregen.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_2"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_3"/>
@@ -53,14 +64,17 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1513030494" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1513030494">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1513033075" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2424257557998450227" xil_pn:start_ts="1513033075">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1513035163" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8935654232040271403" xil_pn:start_ts="1513035163">
+    <transform xil_pn:end_ts="1513103511" xil_pn:in_ck="108537277080" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8935654232040271403" xil_pn:start_ts="1513103361">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RAM.ngc"/>
+      <outfile xil_pn:name="RAM.v"/>
     </transform>
     <transform xil_pn:end_ts="1513030494" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1513030494">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -78,14 +92,19 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1513037018" xil_pn:in_ck="2092088748761410082" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="1093058144156318130" xil_pn:start_ts="1513037010">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1513122645" xil_pn:in_ck="-2647679901721712350" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="1093058144156318130" xil_pn:start_ts="1513122624">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Core_MemCont_VGA.lso"/>
+      <outfile xil_pn:name="Core_MemCont_VGA.ngc"/>
+      <outfile xil_pn:name="Core_MemCont_VGA.ngr"/>
       <outfile xil_pn:name="Core_MemCont_VGA.prj"/>
+      <outfile xil_pn:name="Core_MemCont_VGA.stx"/>
       <outfile xil_pn:name="Core_MemCont_VGA.syr"/>
       <outfile xil_pn:name="Core_MemCont_VGA.xst"/>
       <outfile xil_pn:name="Core_MemCont_VGA_xst.xrpt"/>

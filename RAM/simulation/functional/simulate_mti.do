@@ -48,9 +48,9 @@ cp ../../../RAM.mif .
  vlib work 
 vmap work work
 
-echo "Compiling Core VHDL UNISIM/Behavioral model"
-vcom  -work work ../../../RAM.vhd \
-    ../../example_design/RAM_exdes.vhd
+echo "Compiling Core Verilog UNISIM/Behavioral model"
+vlog -work work ../../../RAM.v 
+vcom -work work ../../example_design/RAM_exdes.vhd
 
 echo "Compiling Test Bench Files"
 
@@ -63,7 +63,9 @@ vcom -work work    ../bmg_stim_gen.vhd
 vcom -work work    ../RAM_synth.vhd 
 vcom -work work    ../RAM_tb.vhd
 
-vsim -novopt -t ps -L XilinxCoreLib -L unisim work.RAM_tb
+
+vlog -work work $env(XILINX)/verilog/src/glbl.v
+vsim  -novopt -t ps -L XilinxCoreLib_ver -L unisims_ver glbl work.RAM_tb
 
 #Disabled waveform to save the disk space
 add log -r /*

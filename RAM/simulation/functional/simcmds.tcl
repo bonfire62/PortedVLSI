@@ -47,9 +47,9 @@
  
  
 
-
-
  
+
+
 
 wcfg new
 isim set radix hex
@@ -58,8 +58,11 @@ wave add /RAM_tb/status
       wave add  /RAM_tb/RAM_synth_inst/BMG_PORT/ADDRA
       wave add  /RAM_tb/RAM_synth_inst/BMG_PORT/DINA
       wave add  /RAM_tb/RAM_synth_inst/BMG_PORT/WEA
+      wave add  /RAM_tb/RAM_synth_inst/BMG_PORT/DOUTA
       wave add  /RAM_tb/RAM_synth_inst/BMG_PORT/CLKB
       wave add  /RAM_tb/RAM_synth_inst/BMG_PORT/ADDRB
+      wave add  /RAM_tb/RAM_synth_inst/BMG_PORT/DINB
+      wave add  /RAM_tb/RAM_synth_inst/BMG_PORT/WEB
       wave add  /RAM_tb/RAM_synth_inst/BMG_PORT/DOUTB
 run all
 quit

@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Mon Dec 11 23:59:41 2017
+# Date: Tue Dec 12 18:29:59 2017
 #
 ##############################################################
 #
@@ -21,19 +21,19 @@ SET addpads = false
 SET asysymbol = true
 SET busformat = BusFormatAngleBracketNotRipped
 SET createndf = false
-SET designentry = VHDL
-SET device = xc6vlx75t
-SET devicefamily = virtex6
+SET designentry = Verilog
+SET device = xc7a100t
+SET devicefamily = artix7
 SET flowvendor = Other
 SET formalverification = false
 SET foundationsym = false
 SET implementationfiletype = Ngc
-SET package = ff484
+SET package = csg324
 SET removerpms = false
 SET simulationfiles = Behavioral
 SET speedgrade = -3
-SET verilogsim = false
-SET vhdlsim = true
+SET verilogsim = true
+SET vhdlsim = false
 # END Project Options
 # BEGIN Select
 SELECT Block_Memory_Generator xilinx.com:ip:blk_mem_gen:7.3
@@ -45,7 +45,7 @@ CSET assume_synchronous_clk=true
 CSET axi_id_width=4
 CSET axi_slave_type=Memory_Slave
 CSET axi_type=AXI4_Full
-CSET byte_size=8
+CSET byte_size=9
 CSET coe_file=.\spiral.coe
 CSET collision_warnings=ALL
 CSET component_name=RAM
@@ -61,9 +61,9 @@ CSET fill_remaining_memory_locations=false
 CSET interface_type=Native
 CSET load_init_file=true
 CSET mem_file=no_Mem_file_loaded
-CSET memory_type=Simple_Dual_Port_RAM
-CSET operating_mode_a=READ_FIRST
-CSET operating_mode_b=READ_FIRST
+CSET memory_type=True_Dual_Port_RAM
+CSET operating_mode_a=WRITE_FIRST
+CSET operating_mode_b=WRITE_FIRST
 CSET output_reset_value_a=0
 CSET output_reset_value_b=0
 CSET pipeline_stages=0
@@ -72,7 +72,7 @@ CSET port_a_enable_rate=100
 CSET port_a_write_rate=50
 CSET port_b_clock=100
 CSET port_b_enable_rate=100
-CSET port_b_write_rate=0
+CSET port_b_write_rate=50
 CSET primitive=8kx2
 CSET read_width_a=16
 CSET read_width_b=16
@@ -91,13 +91,13 @@ CSET reset_type=SYNC
 CSET softecc=false
 CSET use_axi_id=false
 CSET use_bram_block=Stand_Alone
-CSET use_byte_write_enable=true
+CSET use_byte_write_enable=false
 CSET use_error_injection_pins=false
 CSET use_regcea_pin=false
 CSET use_regceb_pin=false
 CSET use_rsta_pin=false
 CSET use_rstb_pin=false
-CSET write_depth_a=32768
+CSET write_depth_a=65536
 CSET write_width_a=16
 CSET write_width_b=16
 # END Parameters
@@ -105,4 +105,4 @@ CSET write_width_b=16
 MISC pkg_timestamp=2012-11-19T16:22:25Z
 # END Extra information
 GENERATE
-# CRC: 62b668e9
+# CRC: fdea9500

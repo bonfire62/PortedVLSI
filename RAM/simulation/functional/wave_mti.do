@@ -3,9 +3,9 @@
  
  
 
-
-
  
+
+
 
 onerror {resume}
 quietly WaveActivateNextPane {} 0
@@ -15,8 +15,11 @@ quietly WaveActivateNextPane {} 0
       add wave -noupdate /RAM_tb/RAM_synth_inst/bmg_port/ADDRA
       add wave -noupdate /RAM_tb/RAM_synth_inst/bmg_port/DINA
       add wave -noupdate /RAM_tb/RAM_synth_inst/bmg_port/WEA
+      add wave -noupdate /RAM_tb/RAM_synth_inst/bmg_port/DOUTA
       add wave -noupdate /RAM_tb/RAM_synth_inst/bmg_port/CLKB
       add wave -noupdate /RAM_tb/RAM_synth_inst/bmg_port/ADDRB
+      add wave -noupdate /RAM_tb/RAM_synth_inst/bmg_port/DINB
+      add wave -noupdate /RAM_tb/RAM_synth_inst/bmg_port/WEB
       add wave -noupdate /RAM_tb/RAM_synth_inst/bmg_port/DOUTB
 
 TreeUpdate [SetDefaultTree]

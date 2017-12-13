@@ -47,13 +47,12 @@ module RegisterFile(clk,AReg,BReg,WriteData,WriteReg,WE,Aout,Bout
 		initial R7 =16'd0;
 		initial R8 =16'd0;
 		initial R9 =16'd0;
-		initial R10 =16'd10;
-		initial R11 =16'b0111_1111_1111_0000;
+		initial R10 =16'b10100000;
+		initial R11 =16'b01111000;
 		initial R12 =16'd1000;
-		initial R13 =16'b1111_1111_1111_1111;
+		initial R13 =16'b01100000;
 		initial R14 =16'd0;
 		initial R15 =16'd1;
-	 
 	 
 	 
 	// Combinatorially Outputting Data

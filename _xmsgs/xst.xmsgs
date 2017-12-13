@@ -5,32 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 49: Assignment to <arg fmt="%s" index="1">WriteDataOut</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 50: Assignment to <arg fmt="%s" index="1">weOut</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="error" file="HDLCompiler" num="267" delta="new" >"C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 58: Cannot find port <arg fmt="%s" index="1">douta</arg> on this module
-</msg>
-
-<msg type="error" file="HDLCompiler" num="267" delta="old" >"C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 60: Cannot find port <arg fmt="%s" index="1">web</arg> on this module
-</msg>
-
-<msg type="error" file="HDLCompiler" num="267" delta="old" >"C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 62: Cannot find port <arg fmt="%s" index="1">dinb</arg> on this module
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\MemCont.v" Line 21: Empty module &lt;<arg fmt="%s" index="1">MemCont</arg>&gt; remains a black box.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\Core_MemCont_VGA.v" Line 79: Assignment to <arg fmt="%s" index="1">accBeenRead</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\Core_MemCont_VGA.v" Line 54: Net &lt;<arg fmt="%s" index="1">xPixelPos[15]</arg>&gt; does not have a driver.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\kenbo\Documents\XilinxProjects\PortedVLSI\Core_MemCont_VGA.v" Line 57: Net &lt;<arg fmt="%s" index="1">aclOut[0]</arg>&gt; does not have a driver.
-</msg>
-
 </messages>
 

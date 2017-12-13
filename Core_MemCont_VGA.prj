@@ -1,7 +1,6 @@
 verilog work "VGA_SignalGen.v"
 verilog work "RegisterFile.v"
-vhdl work "RAM.vhd"
-verilog work "Dispatch.v"
+verilog work "RAM.v"
 verilog work "ALU.v"
 verilog work "VGA_Controller.v"
 verilog work "MemCont.v"

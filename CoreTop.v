@@ -149,7 +149,7 @@ module CoreTop(clk,ReadData, Address,WriteData,WriteEnable
 				WriteEnable <= 1'b0;
 				if(Instruction[31:28]  == load) // If incoming load instruction
 				begin
-					Address <= {Instruction[23:16],ReadData}; // Read From Load Address
+					Address <= {8'b0,RFBout}; // Read From Load Address (readdata at this point is the next line)
 				end
 				if(Instruction[31:28]  == store) // Change outputs for store instruction
 				begin
@@ -183,7 +183,7 @@ module CoreTop(clk,ReadData, Address,WriteData,WriteEnable
 	// Assign Select Lines to where they can be found in the instruction
 	assign RFWriteReg = Instruction[27:24];
 	assign ARegSelect = (Instruction[31:28] == store || Instruction[31:28] == beq || Instruction [31:28] == wr)?Instruction[27:24]:Instruction[23:20];
-	assign BRegSelect = (Instruction[31:28] == beq || Instruction [31:28] == wr)?    Instruction[23:20]:Instruction[19:16];
+	assign BRegSelect = (Instruction[31:28] == beq || Instruction [31:28] == wr || Instruction[31:28] == load)? Instruction[23:20]:Instruction[19:16];
 	// When to write to register file
 	always @(*)
 	begin
